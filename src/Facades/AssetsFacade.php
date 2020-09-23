@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Facade;
  *
  * @since 22/07/2015 11:25 PM
  */
-class AssetFacade extends Facade
+class AssetsFacade extends Facade
 {
     /**
      * @return string

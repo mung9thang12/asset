@@ -5,27 +5,37 @@ return [
     'enable_version' => env('ASSET_ENABLE_VERSION', false),
     'version'        => env('ASSET_VERSION', time()),
     'scripts'        => [
-        'modernizr',
-        'app',
+        'jquery',
+        'bootstrap',
     ],
     'styles'         => [
+        'fontawesome',
         'bootstrap',
     ],
     'resources'      => [
         'scripts' => [
-            'app'       => [
-                'use_cdn'  => false,
+            'bootstrap'       => [
+                'use_cdn'  => true,
                 'location' => 'footer',
                 'src'      => [
-                    'local' => '/js/app.js',
+                    'local' => '/vendor/bootstrap/js/bootstrap.min.js',
+                    'cdn'=>'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'
                 ],
             ],
-            'modernizr' => [
+            'bootstrap-bundle'       => [
                 'use_cdn'  => true,
-                'location' => 'header',
+                'location' => 'footer',
                 'src'      => [
-                    'local' => '/vendor/core/packages/modernizr/modernizr.min.js',
-                    'cdn'   => '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js',
+                    'local' => '/vendor/bootstrap/js/bootstrap.bundle.min.js',
+                    'cdn'=>'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js'
+                ],
+            ],
+            'jquery' => [
+                'use_cdn'  => true,
+                'location' => 'footer',
+                'src'      => [
+                    'local' => '/vendor/jquery/jquery-3.5.1.min.js',
+                    'cdn'   => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
                 ],
             ],
         ],
@@ -34,12 +44,15 @@ return [
                 'use_cdn'    => true,
                 'location'   => 'header',
                 'src'        => [
-                    'local' => '/packages/bootstrap/css/bootstrap.min.css',
-                    'cdn'   => '//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css',
+                    'local' => '/vendor/bootstrap/css/bootstrap.min.css',
+                    'cdn'   => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css',
                 ],
-                'attributes' => [
-                    'integrity'   => 'sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB',
-                    'crossorigin' => 'anonymous',
+            ],
+            'fontawesome' => [
+                'use_cdn'    => true,
+                'location'   => 'header',
+                'src'        => [
+                    'cdn'   => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css',
                 ],
             ],
         ],
