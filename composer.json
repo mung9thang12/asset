@@ -1,0 +1,30 @@
+{
+    "name": "mung9thang12/asset-manager",
+    "description": "laravel asset manager",
+    "type": "library",
+    "authors": [
+        {
+            "name": "mung9thang12",
+            "email": "mung9thang12@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mung9thang12\\Asset\\":"src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mung9thang12\\Asset\\Providers\\AssetServiceProvider"
+            ],
+            "aliases": {
+                "Asset": "Mung9thang12\\Asset\\Facades\\AssetsFacade"
+            }
+        }
+    }
+}
