@@ -1,6 +1,6 @@
 <?php
 
-namespace Mung9thang12\Assets\Providers;
+namespace Mung9thang12\Asset\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

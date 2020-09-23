@@ -1,6 +1,6 @@
 <?php
 
-namespace Mung9thang12\Assets;
+namespace Mung9thang12\Asset;
 
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Support\HtmlString;
